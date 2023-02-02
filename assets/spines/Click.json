@@ -1,0 +1,80 @@
+{
+"skeleton": {
+	"hash": "orlBj0iIFaTGaZKR8RiOvsxmhqo",
+	"spine": "3.8.99",
+	"x": -216.39,
+	"y": 36.84,
+	"width": 444.84,
+	"height": 109.15,
+	"images": "./Asset/",
+	"audio": ""
+},
+"bones": [
+	{ "name": "root" },
+	{ "name": "Button", "parent": "root", "x": 6.4, "y": 98.72, "color": "fdff01ff" },
+	{ "name": "pngwing.com", "parent": "root", "x": -251.84, "y": 86.53 }
+],
+"slots": [
+	{ "name": "root", "bone": "root", "attachment": "root" },
+	{ "name": "Button", "bone": "Button", "attachment": "Group 203" },
+	{ "name": "pngwing.com", "bone": "pngwing.com", "color": "ffffff84", "attachment": "Rectangle 92" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"Button": {
+				"Group 203": { "x": 4.05, "y": 1.62, "width": 454, "height": 127 }
+			},
+			"pngwing.com": {
+				"Rectangle 92": { "x": -1.01, "y": 2.69, "scaleX": 0.7, "scaleY": 0.56, "width": 122, "height": 186 }
+			},
+			"root": {
+				"root": {
+					"type": "clipping",
+					"end": "root",
+					"vertexCount": 4,
+					"vertices": [ -216.39, 144.94, -175.28, 32.35, 186.33, 34.74, 228.45, 145.98 ],
+					"color": "ce3a3aff"
+				}
+			}
+		}
+	}
+],
+"animations": {
+	"animation": {
+		"bones": {
+			"Button": {
+				"scale": [
+					{ "curve": 0.25, "c3": 0.625, "c4": 0.5 },
+					{ "time": 0.8333, "x": 1.1, "y": 1.1, "curve": 0.375, "c2": 0.5, "c3": 0.75 },
+					{ "time": 1.6667 }
+				]
+			},
+			"pngwing.com": {
+				"translate": [
+					{ "time": 0.6, "curve": 0.25, "c3": 0.75 },
+					{ "time": 1.1333, "x": 556.33 }
+				]
+			}
+		},
+		"deform": {
+			"default": {
+				"root": {
+					"root": [
+						{ "curve": 0.25, "c3": 0.625, "c4": 0.5 },
+						{
+							"time": 0.8333,
+							"vertices": [ -18.24098, 5.66098, -17.61198, -3.774, 16.98299, -6.28999, 17.61198, 6.91896 ],
+							"curve": 0.375,
+							"c2": 0.5,
+							"c3": 0.75
+						},
+						{ "time": 1.6667 }
+					]
+				}
+			}
+		}
+	}
+}
+}

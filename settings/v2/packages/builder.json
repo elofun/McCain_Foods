@@ -1,0 +1,14 @@
+{
+  "__version__": "1.2.8",
+  "splash-setting": {
+    "url": "D:\\Projects\\Elofun\\gameloft-rtl-mint\\build-templates\\web-mobile\\loading-splash-replacement.png",
+    "totalTime": 0,
+    "displayWatermark": false,
+    "clearColor": {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 1
+    }
+  }
+}

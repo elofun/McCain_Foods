@@ -1,0 +1,44 @@
+{
+  "packages": {
+    "web-mobile": {
+      "orientation": "portrait",
+      "polyfills": {
+        "asyncFunctions": true
+      },
+      "remoteServerAddress": "",
+      "embedWebDebugger": false,
+      "__version__": "1.0.0"
+    },
+    "cocos-service": {
+      "__version__": "3.0.1",
+      "configID": "80f814",
+      "services": []
+    }
+  },
+  "name": "minigame",
+  "platform": "web-mobile",
+  "buildPath": "project://build",
+  "debug": false,
+  "md5Cache": true,
+  "sourceMaps": false,
+  "replaceSplashScreen": true,
+  "mainBundleCompressionType": "merge_all_json",
+  "mainBundleIsRemote": false,
+  "mergeStartScene": false,
+  "experimentalEraseModules": false,
+  "compressTexture": true,
+  "packAutoAtlas": true,
+  "startScene": "f772a90a-f81b-483b-98d5-21869666335e",
+  "scenes": [
+    {
+      "url": "db://assets/scenes/Init.scene",
+      "uuid": "f772a90a-f81b-483b-98d5-21869666335e"
+    },
+    {
+      "url": "db://assets/scenes/Ingame.scene",
+      "uuid": "cfc71a26-d9c6-4bf7-b504-adebdff282ec"
+    }
+  ],
+  "outputName": "web-mobile",
+  "__version__": "1.2.8"
+}

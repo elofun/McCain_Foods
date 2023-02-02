@@ -1,0 +1,49 @@
+{
+"skeleton": {
+	"hash": "cBk2FYvVzULzS9A0Wb6runMooqw",
+	"spine": "3.8.99",
+	"x": 46.02,
+	"y": 148.34,
+	"width": 96.7,
+	"height": 102.05,
+	"images": "../Football/images/",
+	"audio": "../Football/"
+},
+"bones": [
+	{ "name": "root" },
+	{ "name": "Hand/Frame 1", "parent": "root", "rotation": -12.3, "x": 96.16, "y": 188.64 }
+],
+"slots": [
+	{ "name": "Hand/Frame 1", "bone": "Hand/Frame 1", "attachment": "Hand/Frame 1" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"Hand/Frame 1": {
+				"Hand/Frame 1": { "x": -4.04, "y": 10.1, "width": 80, "height": 87 },
+				"Hand/Frame 2": { "x": -4.04, "y": 10.1, "width": 84, "height": 84 },
+				"Hand/Frame 3": { "x": -4.04, "y": 10.1, "width": 110, "height": 82 },
+				"Hand/Frame 4": { "x": -4.04, "y": 10.1, "width": 124, "height": 89 },
+				"Hand/Frame 5": { "x": -4.04, "y": 10.1, "width": 131, "height": 93 },
+				"Hand/Frame 6": { "x": -4.04, "y": 10.1, "width": 132, "height": 95 }
+			}
+		}
+	}
+],
+"animations": {
+	"Ball first scene": {
+		"slots": {
+			"Hand/Frame 1": {
+				"attachment": [
+					{ "time": 0.0667, "name": "Hand/Frame 2" },
+					{ "time": 0.1333, "name": "Hand/Frame 3" },
+					{ "time": 0.2, "name": "Hand/Frame 4" },
+					{ "time": 0.2667, "name": "Hand/Frame 5" },
+					{ "time": 0.4, "name": "Hand/Frame 6" }
+				]
+			}
+		}
+	}
+}
+}
