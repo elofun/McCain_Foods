@@ -1,5 +1,6 @@
 
-import { _decorator, Component, Node, sp } from 'cc';
+import { _decorator, Component, Node, sp, tween } from 'cc';
+import { UIOpacity } from '../../../override_engine/cocos/2d';
 import { string } from '../../../override_engine/cocos/core/data/decorators';
 import { Interact } from '../game/Interactions/Interact';
 import { SoundMgr } from '../utils/SoundMgr';
@@ -8,15 +9,10 @@ const { ccclass, property } = _decorator;
 
 const dataShow = [
 
-    {
-        name: 'Oven',
-        time: 1,
-        anim: '',
-
-    },
+    
     {
         name: 'Hand',
-        time: 2,
+        time: 1.5,
         anim: 'Hand',
         sfx: ''
 
@@ -26,14 +22,10 @@ const dataShow = [
 ]
 
 const dataHide = [
-    {
-        name: 'Oven',
-        time: 6.5,
-        sfx: ''
-    },
+    
     {
         name: 'Hand',
-        time: 5.5,
+        time: 6,
         sfx: ''
     },
 ]
@@ -43,21 +35,16 @@ const interactions = [
         name: 'Touch',
         timeStart: 1,
         jumpTo: 5,
-        sfx: 'SFX_TAP_BALL',
+        sfx: '',
     },
-    {
-        name: 'SwipeRight',
-        timeStart: 7,
-        jumpTo: 11.5,
-        sfx: 'SFX_SWIPE',
-    },
+    
 ]
 
 const sfx = [
     {
         name: 'sfx_kick',
-        timeStart: 5.5,
-        sfx: 'SFX_KICK',
+        timeStart: 5,
+        sfx: 'SFX_TAP_BALL',
     },
 ]
 
@@ -94,12 +81,7 @@ export class SpineController extends Component {
         this.getComponent(sp.Skeleton).setCompleteListener(() => {
 
             this.priteText.active = false;
-
-            setTimeout(()=>{
-                this.fries.active = true;
-                
-            },1000)
-
+            this.fries.active = true;   
             
             if (!this.isEngaged) return;
             TrackingManager.SendEventTracking(TrackingAction.COMPLETE_ENGAGEMENTS);

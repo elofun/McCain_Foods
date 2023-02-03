@@ -8,12 +8,8 @@ const { ccclass, property, requireComponent } = _decorator;
 export class SoundMgr extends SingletonComponent<SoundMgr>()
 {
     @property(AudioClip) BGM: AudioClip = null;
-    @property(AudioClip) SFX_SCENE_2: AudioClip = null;
-    @property(AudioClip) SFX_TEXT_MOVE: AudioClip = null;
     @property(AudioClip) SFX_TAP_BALL: AudioClip = null;
-    @property(AudioClip) SFX_SWIPE: AudioClip = null;
-    @property(AudioClip) SFX_KICK: AudioClip = null;
-    @property(AudioClip) SFX_TRANSIT_START: AudioClip = null;
+    
 
     public audioSource: AudioSource = null;
     @property(AudioSource) sfxSource: AudioSource = null;
