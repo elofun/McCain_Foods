@@ -11,11 +11,22 @@ const dataShow = [
 
     
     {
+        name: 'Text',
+        time: 0.8,
+        sfx: ''
+
+    },
+    {
         name: 'Hand',
         time: 1.5,
         anim: 'Hand',
         sfx: ''
 
+    },
+    {
+        name: 'Fries',
+        time: 7,
+        sfx: ''
     },
     
     
@@ -25,6 +36,11 @@ const dataHide = [
     
     {
         name: 'Hand',
+        time: 6,
+        sfx: ''
+    },
+    {
+        name: 'Text',
         time: 6,
         sfx: ''
     },
@@ -56,8 +72,7 @@ export class SpineController extends Component {
     @property(Node)
     public interactions: Node = null;
 
-    @property(Node)
-    public fries: Node = null;
+    
     @property(Node)
     public priteText: Node = null;
 
@@ -81,13 +96,13 @@ export class SpineController extends Component {
         this.getComponent(sp.Skeleton).setCompleteListener(() => {
 
             this.priteText.active = false;
-            this.fries.active = true;   
+            
             
             if (!this.isEngaged) return;
             TrackingManager.SendEventTracking(TrackingAction.COMPLETE_ENGAGEMENTS);
         })
 
-        this.fries.active = false;
+        
         this.priteText.active = true;
     }
 
