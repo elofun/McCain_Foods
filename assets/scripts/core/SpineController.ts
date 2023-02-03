@@ -7,32 +7,41 @@ import TrackingManager, { TrackingAction } from './TrackingManager';
 const { ccclass, property } = _decorator;
 
 const dataShow = [
+
     {
-        name: 'ButtonDontHaveText',
-        time: 0,
+        name: 'Oven',
+        time: 1,
+        anim: '',
+
     },
     {
-        name: 'Text',
-        time: 11.5,
-        sfx: 'SFX_TEXT_MOVE',
+        name: 'Hand',
+        time: 2,
+        anim: 'Hand',
+        sfx: ''
+
     },
-    {
-        name: 'ButtonHaveText',
-        time: 11.5,
-    },
+    
+    
 ]
 
 const dataHide = [
     {
-        name: 'ButtonDontHaveText',
-        time: 11.5,
+        name: 'Oven',
+        time: 6.5,
+        sfx: ''
+    },
+    {
+        name: 'Hand',
+        time: 5.5,
+        sfx: ''
     },
 ]
 
 const interactions = [
     {
         name: 'Touch',
-        timeStart: 0.25,
+        timeStart: 1,
         jumpTo: 5,
         sfx: 'SFX_TAP_BALL',
     },
@@ -56,13 +65,21 @@ const sfx = [
 export class SpineController extends Component {
     @property(Node)
     public secondarySpines: Node = null;
+
     @property(Node)
     public interactions: Node = null;
+
+    @property(Node)
+    public fries: Node = null;
+    @property(Node)
+    public priteText: Node = null;
 
     private anim: any = null;
     private sfxDone: Array<string> = [];
     private isEngaged = false;
     private isCompleted = false;
+
+    
 
     get IsEngaged() {
         return this.isEngaged
@@ -72,12 +89,24 @@ export class SpineController extends Component {
     }
 
     onLoad() {
-        this.anim = this.getComponent(sp.Skeleton).setAnimation(0, 'animation', false)
+        this.anim = this.getComponent(sp.Skeleton).setAnimation(0, 'Oven Scene', false)
         this.sfxDone = [];
         this.getComponent(sp.Skeleton).setCompleteListener(() => {
+
+            this.priteText.active = false;
+
+            setTimeout(()=>{
+                this.fries.active = true;
+                
+            },1000)
+
+            
             if (!this.isEngaged) return;
             TrackingManager.SendEventTracking(TrackingAction.COMPLETE_ENGAGEMENTS);
         })
+
+        this.fries.active = false;
+        this.priteText.active = true;
     }
 
     update() {

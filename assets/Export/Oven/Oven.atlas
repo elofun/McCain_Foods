@@ -1,0 +1,55 @@
+
+Oven.png
+size: 1941,1509
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Layer 1
+  rotate: true
+  xy: 2, 52
+  size: 337, 327
+  orig: 337, 327
+  offset: 0, 0
+  index: -1
+Layer 2
+  rotate: true
+  xy: 691, 53
+  size: 336, 253
+  orig: 336, 253
+  offset: 0, 0
+  index: -1
+Layer 24 1
+  rotate: false
+  xy: 2, 2
+  size: 687, 48
+  orig: 687, 48
+  offset: 0, 0
+  index: -1
+Light1
+  rotate: true
+  xy: 972, 538
+  size: 969, 967
+  orig: 991, 990
+  offset: 11, 11
+  index: -1
+Light2
+  rotate: true
+  xy: 2, 391
+  size: 1116, 968
+  orig: 1120, 969
+  offset: 2, 1
+  index: -1
+Light3
+  rotate: false
+  xy: 972, 11
+  size: 848, 525
+  orig: 915, 525
+  offset: 32, 0
+  index: -1
+Oven
+  rotate: true
+  xy: 331, 52
+  size: 337, 327
+  orig: 337, 327
+  offset: 0, 0
+  index: -1

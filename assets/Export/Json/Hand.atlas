@@ -1,0 +1,34 @@
+
+Hand.png
+size: 322,205
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Hand/Ellipse 1
+  rotate: false
+  xy: 2, 2
+  size: 202, 201
+  orig: 202, 201
+  offset: 0, 0
+  index: -1
+Hand/Ellipse 1 copy
+  rotate: false
+  xy: 274, 53
+  size: 46, 46
+  orig: 46, 46
+  offset: 0, 0
+  index: -1
+Hand/Ellipse 1 copy 2
+  rotate: false
+  xy: 206, 101
+  size: 103, 102
+  orig: 103, 102
+  offset: 0, 0
+  index: -1
+Hand/Layer 11
+  rotate: false
+  xy: 206, 5
+  size: 66, 94
+  orig: 71, 94
+  offset: 2, 0
+  index: -1
