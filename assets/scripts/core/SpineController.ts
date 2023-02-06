@@ -49,8 +49,8 @@ const dataHide = [
 const interactions = [
     {
         name: 'Touch',
-        timeStart: 0.25,
-        jumpTo: 2,
+        timeStart: 1.5,
+        jumpTo: 6.5,
         sfx: 'SFX_CLICK',
     },
     
@@ -183,6 +183,6 @@ export class SpineController extends Component {
     }
 
     jumpTo(time: number) {
-        this.anim.trackTime = time;
+        this.anim.trackTime = time; 
     }
 }
