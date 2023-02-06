@@ -49,18 +49,18 @@ const dataHide = [
 const interactions = [
     {
         name: 'Touch',
-        timeStart: 1,
-        jumpTo: 5,
-        sfx: '',
+        timeStart: 1.5,
+        jumpTo: 6.5,
+        sfx: 'SFX_CLICK',
     },
     
 ]
 
 const sfx = [
     {
-        name: 'sfx_kick',
-        timeStart: 5,
-        sfx: 'SFX_TAP_BALL',
+        name: 'Click',
+        timeStart: 5.5,
+        sfx: 'SFX_CLICK',
     },
 ]
 
@@ -96,7 +96,6 @@ export class SpineController extends Component {
         this.getComponent(sp.Skeleton).setCompleteListener(() => {
 
             this.priteText.active = false;
-            
             
             if (!this.isEngaged) return;
             TrackingManager.SendEventTracking(TrackingAction.COMPLETE_ENGAGEMENTS);
@@ -184,6 +183,6 @@ export class SpineController extends Component {
     }
 
     jumpTo(time: number) {
-        this.anim.trackTime = time;
+        this.anim.trackTime = time; 
     }
 }
