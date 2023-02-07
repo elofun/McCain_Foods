@@ -8,6 +8,7 @@ const { ccclass, property } = _decorator;
 export class Touch extends Interact {
     onLoad() {
         this.node.on(Node.EventType.TOUCH_END, () => {
+            console.log("Asd")
             this.callback();
         })
     }
