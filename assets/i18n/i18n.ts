@@ -1,12 +1,12 @@
 import { ID } from './data/ID'
 import { EN } from './data/EN'
-import { RU } from './data/RU'
+import { FR } from './data/FR'
 import { Enum, EventTarget } from 'cc'
 
 export const i18n_TEXT_KEYS = Enum(ID)
 export const i18n_LANGUAGES = Enum({
     EN: 0,
-    RU: 1
+    FR: 1
 })
 
 const i18n_EVENTS = Enum({
@@ -40,9 +40,9 @@ export class i18n
 
         switch (language)
         {
-            case i18n_LANGUAGES.RU:
-                i18n.data = RU
-                i18n.currentLanguage = i18n_LANGUAGES.RU
+            case i18n_LANGUAGES.FR:
+                i18n.data = FR
+                i18n.currentLanguage = i18n_LANGUAGES.FR
                 break;
 
             default:
