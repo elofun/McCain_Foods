@@ -1,0 +1,1 @@
+{"importBase":"import","nativeBase":"native","name":"font","deps":["main"],"uuids":["8dJXP9zFNIHarFRfbuyurI","927gPUw3tLZ4sn1Mc7VAn2"],"paths":{"0":["geomanist-regular-italic-webfont",0],"1":["geomanist-regular-webfont",0]},"scenes":{},"packs":{},"versions":{"import":[0,"d58cf"],"native":[0,"c2f7c"]},"redirect":[1,"0"],"debug":false,"types":["cc.TTFFont"]}
