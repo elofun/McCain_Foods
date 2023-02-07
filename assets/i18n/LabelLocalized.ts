@@ -1,5 +1,6 @@
 
-import { _decorator, Component, Node, Label, Enum } from 'cc';
+import { _decorator, Component, Node, Label, Enum, HorizontalTextAlignment, RichTextComponent } from 'cc';
+import { RichText } from '../../override_engine/cocos/2d';
 const { ccclass, property, requireComponent, executeInEditMode } = _decorator;
 
 
@@ -10,8 +11,7 @@ import { i18n, i18n_TEXT_KEYS, i18n_LANGUAGES, i18n_PARAMS } from './i18n';
 @ccclass('LabelLocalized')
 @requireComponent(Label)
 @executeInEditMode(true)
-export class LabelLocalized extends Component
-{
+export class LabelLocalized extends Component {
     @property({
         serializable: true
     })
@@ -22,14 +22,11 @@ export class LabelLocalized extends Component
         readonly: true,
         tooltip: 'Change current language by i18n.init function'
     })
-    get language(): number
-    {
+    get language(): number {
         return this._language
     }
-    set language(value: number)
-    {
-        if (this._language === value)
-        {
+    set language(value: number) {
+        if (this._language === value) {
             return
         }
 
@@ -46,14 +43,11 @@ export class LabelLocalized extends Component
         type: i18n_TEXT_KEYS,
         tooltip: 'Change text ID'
     })
-    get textKey(): number
-    {
+    get textKey(): number {
         return this._textKey
     }
-    set textKey(value: number)
-    {
-        if (this._textKey === value)
-        {
+    set textKey(value: number) {
+        if (this._textKey === value) {
             return
         }
 
@@ -63,42 +57,46 @@ export class LabelLocalized extends Component
 
     private _params: i18n_PARAMS[] | null = null
     private _label: Label | null = null
+    private _richText: RichTextComponent | null = null
 
-    updateParams(params: i18n_PARAMS[] | null)
-    {
+    private text: String = ''
+
+    updateParams(params: i18n_PARAMS[] | null) {
         this._params = params
         this._updateText()
     }
 
-    private _updateText()
-    {
-        if (this._label)
-        {
+    private _updateText() {
+        if (this._label) {
             this._label.string = i18n.t(this._textKey, this._params)
+        }
+
+        if (this._richText) {
+            this._richText.string = this.text.replace('Advertisement',i18n.t(this._textKey, this._params))
         }
     }
 
-    private _updateLanguage()
-    {
+    private _updateLanguage() {
         i18n.init(this._language)
 
         this._updateText()
     }
 
-    private _onLanguageChanged(language: number)
-    {
+    private _onLanguageChanged(language: number) {
         this._updateText()
     }
 
-    onLoad()
-    {
+    onLoad() {
         this._label = this.getComponent(Label)
+        this._richText = this.getComponent(RichTextComponent)
+
+        this.text = this._richText.string
+
         // console.log('onLanguageChanged', this.node.name, 'key', this.textKey)
         i18n.onLanguageChanged(this._onLanguageChanged, this)
     }
 
-    onDestroy()
-    {
+    onDestroy() {
         // console.log('offLanguageChanged', this.node.name, 'key', this.textKey)
         i18n.offLanguageChanged(this._onLanguageChanged, this)
     }

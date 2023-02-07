@@ -1,0 +1,13 @@
+type i18n_TEXT = {
+    [key: string]: string
+}
+
+export const FR: i18n_TEXT = {
+
+    "AD_TEXT": "Publicité",
+    "TAP": "TOUCHE LE FOUR POUR VERIFIER LES SUPERFRIES",
+    "COOK": "SUPERFRIES EN COURS DE CUISSON",
+    "SUPERFRIES": "SUPERFRIES PRETES !",
+    "SUPERFRIES_FTO": "SUPERFRIES SORTIES DU FOUR",
+    "LEARN_MORE": "PLUS D’INFORMATIONS"
+}

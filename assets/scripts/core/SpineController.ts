@@ -50,7 +50,7 @@ const interactions = [
     {
         name: 'Touch',
         timeStart: 1.5,
-        jumpTo: 6.5,
+        jumpTo: 5.6,
         sfx: 'SFX_CLICK',
     },
     
