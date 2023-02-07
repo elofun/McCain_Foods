@@ -2,7 +2,7 @@
   "ver": "1.0.21",
   "importer": "image",
   "imported": true,
-  "uuid": "c8b904c8-3da2-4f93-bad3-baacc04ff4df",
+  "uuid": "d639bb1f-7525-4718-8e4a-bcfbdf7f16ca",
   "files": [
     ".png",
     ".json"
@@ -10,8 +10,8 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "c8b904c8-3da2-4f93-bad3-baacc04ff4df@6c48a",
-      "displayName": "Fire2",
+      "uuid": "d639bb1f-7525-4718-8e4a-bcfbdf7f16ca@6c48a",
+      "displayName": "Oven",
       "id": "6c48a",
       "name": "texture",
       "userData": {
@@ -22,7 +22,7 @@
         "mipfilter": "none",
         "anisotropy": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "c8b904c8-3da2-4f93-bad3-baacc04ff4df"
+        "imageUuidOrDatabaseUri": "d639bb1f-7525-4718-8e4a-bcfbdf7f16ca"
       },
       "ver": "1.0.21",
       "imported": true,
@@ -35,6 +35,6 @@
   "userData": {
     "hasAlpha": true,
     "type": "texture",
-    "redirect": "c8b904c8-3da2-4f93-bad3-baacc04ff4df@6c48a"
+    "redirect": "d639bb1f-7525-4718-8e4a-bcfbdf7f16ca@6c48a"
   }
 }

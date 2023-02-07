@@ -2,7 +2,7 @@
   "ver": "1.0.21",
   "importer": "image",
   "imported": true,
-  "uuid": "268a3a54-0c56-4f4a-9d46-acf09555b23f",
+  "uuid": "8e2dbfec-62b4-4280-9009-949f9e2e1efa",
   "files": [
     ".png",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "268a3a54-0c56-4f4a-9d46-acf09555b23f@6c48a",
+      "uuid": "8e2dbfec-62b4-4280-9009-949f9e2e1efa@6c48a",
       "displayName": "Hand",
       "id": "6c48a",
       "name": "texture",
@@ -22,7 +22,7 @@
         "mipfilter": "none",
         "anisotropy": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "268a3a54-0c56-4f4a-9d46-acf09555b23f"
+        "imageUuidOrDatabaseUri": "8e2dbfec-62b4-4280-9009-949f9e2e1efa"
       },
       "ver": "1.0.21",
       "imported": true,
@@ -35,6 +35,6 @@
   "userData": {
     "hasAlpha": true,
     "type": "texture",
-    "redirect": "268a3a54-0c56-4f4a-9d46-acf09555b23f@6c48a"
+    "redirect": "8e2dbfec-62b4-4280-9009-949f9e2e1efa@6c48a"
   }
 }

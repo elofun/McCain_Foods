@@ -1,54 +1,68 @@
 
 Oven.png
-size: 1941,1509
+size: 1991,1672
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 Layer 1
   rotate: true
-  xy: 2, 52
+  xy: 919, 211
+  size: 337, 327
+  orig: 337, 327
+  offset: 0, 0
+  index: -1
+Layer 1_France
+  rotate: true
+  xy: 1662, 341
   size: 337, 327
   orig: 337, 327
   offset: 0, 0
   index: -1
 Layer 2
-  rotate: true
-  xy: 691, 53
+  rotate: false
+  xy: 1248, 375
   size: 336, 253
   orig: 336, 253
   offset: 0, 0
   index: -1
 Layer 24 1
   rotate: false
-  xy: 2, 2
+  xy: 973, 630
   size: 687, 48
   orig: 687, 48
   offset: 0, 0
   index: -1
 Light1
-  rotate: true
-  xy: 972, 538
-  size: 969, 967
+  rotate: false
+  xy: 973, 680
+  size: 991, 990
   orig: 991, 990
-  offset: 11, 11
+  offset: 0, 0
   index: -1
 Light2
   rotate: true
-  xy: 2, 391
-  size: 1116, 968
+  xy: 2, 550
+  size: 1120, 969
   orig: 1120, 969
-  offset: 2, 1
+  offset: 0, 0
   index: -1
 Light3
   rotate: false
-  xy: 972, 11
-  size: 848, 525
+  xy: 2, 23
+  size: 915, 525
   orig: 915, 525
-  offset: 32, 0
+  offset: 0, 0
   index: -1
 Oven
   rotate: true
-  xy: 331, 52
+  xy: 1248, 2
+  size: 337, 327
+  orig: 337, 327
+  offset: 0, 0
+  index: -1
+Oven_France
+  rotate: true
+  xy: 1577, 2
   size: 337, 327
   orig: 337, 327
   offset: 0, 0

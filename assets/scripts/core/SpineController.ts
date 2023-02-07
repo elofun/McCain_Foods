@@ -2,6 +2,7 @@
 import { _decorator, Component, Node, sp, tween } from 'cc';
 import { UIOpacity } from '../../../override_engine/cocos/2d';
 import { string } from '../../../override_engine/cocos/core/data/decorators';
+import { i18n } from '../../i18n/i18n';
 import { Interact } from '../game/Interactions/Interact';
 import { SoundMgr } from '../utils/SoundMgr';
 import TrackingManager, { TrackingAction } from './TrackingManager';
@@ -25,7 +26,7 @@ const dataShow = [
     },
     {
         name: 'Fries',
-        time: 7,
+        time: 5,
         sfx: ''
     },
     
@@ -36,12 +37,12 @@ const dataHide = [
     
     {
         name: 'Hand',
-        time: 6,
+        time: 4,
         sfx: ''
     },
     {
         name: 'Text',
-        time: 6,
+        time: 4,
         sfx: ''
     },
 ]
@@ -50,7 +51,7 @@ const interactions = [
     {
         name: 'Touch',
         timeStart: 1.5,
-        jumpTo: 5.6,
+        jumpTo: 4.6,
         sfx: 'SFX_CLICK',
     },
     
@@ -72,10 +73,6 @@ export class SpineController extends Component {
     @property(Node)
     public interactions: Node = null;
 
-    
-    @property(Node)
-    public priteText: Node = null;
-
     private anim: any = null;
     private sfxDone: Array<string> = [];
     private isEngaged = false;
@@ -91,18 +88,21 @@ export class SpineController extends Component {
     }
 
     onLoad() {
+        this.anim = this.getComponent(sp.Skeleton).setSkin(i18n.language === 0 ? 'ENG' : 'FRANCE')
         this.anim = this.getComponent(sp.Skeleton).setAnimation(0, 'Oven Scene', false)
+        
+
+
+        
         this.sfxDone = [];
         this.getComponent(sp.Skeleton).setCompleteListener(() => {
 
-            this.priteText.active = false;
-            
             if (!this.isEngaged) return;
             TrackingManager.SendEventTracking(TrackingAction.COMPLETE_ENGAGEMENTS);
         })
 
         
-        this.priteText.active = true;
+        
     }
 
     update() {
@@ -160,6 +160,7 @@ export class SpineController extends Component {
                 interact.getComponent(Interact).Done = true
                 interact.getComponent(Interact).setActive(false);
                 TrackingManager.SendEventTracking(TrackingAction.TYPE_QTE_FAILED);
+                return;
             };
 
             if (interact.active) return;
