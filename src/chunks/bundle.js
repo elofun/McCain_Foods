@@ -19,9 +19,9 @@ System.register("chunks:///_virtual/_curry1.js",["./_isPlaceholder.js"],(functio
 
 System.register("chunks:///_virtual/_curry2.js",["./_isPlaceholder.js","./_curry1.js"],(function(t){"use strict";var n,r;return{setters:[function(t){n=t.default},function(t){r=t.default}],execute:function(){t("default",(function(t){return function u(e,c){switch(arguments.length){case 0:return u;case 1:return n(e)?u:r((function(n){return t(e,n)}));default:return n(e)&&n(c)?u:n(e)?r((function(n){return t(n,c)})):n(c)?r((function(n){return t(e,n)})):t(e,c)}}}))}}}));
 
-System.register("chunks:///_virtual/_isString.js",[],(function(t){"use strict";return{execute:function(){t("default",(function(t){return"[object String]"===Object.prototype.toString.call(t)}))}}}));
-
 System.register("chunks:///_virtual/_isInteger.js",[],(function(e){"use strict";return{execute:function(){e("default",Number.isInteger||function(e){return e<<0===e})}}}));
+
+System.register("chunks:///_virtual/_isString.js",[],(function(t){"use strict";return{execute:function(){t("default",(function(t){return"[object String]"===Object.prototype.toString.call(t)}))}}}));
 
 System.register("chunks:///_virtual/_isPlaceholder.js",[],(function(e){"use strict";return{execute:function(){e("default",(function(e){return null!=e&&"object"==typeof e&&!0===e["@@functional/placeholder"]}))}}}));
 
