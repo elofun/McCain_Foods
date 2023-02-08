@@ -72,7 +72,7 @@ export class LabelLocalized extends Component {
         }
 
         if (this._richText) {
-            //this._richText.string = this.text.replace('Advertisement',i18n.t(this._textKey, this._params))
+            this._richText.string = this.text.replace('Advertisement',i18n.t(this._textKey, this._params))
         }
     }
 
@@ -88,10 +88,10 @@ export class LabelLocalized extends Component {
 
     onLoad() {
         this._label = this.getComponent(Label)
-        
+        this._richText = this.getComponent(RichTextComponent)
 
         if (this._richText) {
-            this._richText = this.getComponent(RichTextComponent)
+            
             this.text = this._richText.string
         }
         
