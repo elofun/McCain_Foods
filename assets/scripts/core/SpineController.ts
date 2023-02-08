@@ -26,7 +26,7 @@ const dataShow = [
     },
     {
         name: 'Fries',
-        time: 5,
+        time: 6.6,
         sfx: ''
     },
     
@@ -51,7 +51,7 @@ const interactions = [
     {
         name: 'Touch',
         timeStart: 1.5,
-        jumpTo: 4.6,
+        jumpTo: 4,
         sfx: 'SFX_CLICK',
     },
     
