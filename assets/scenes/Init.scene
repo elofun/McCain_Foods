@@ -2441,7 +2441,7 @@
         "__id__": 242
       }
     ],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 272
@@ -2882,7 +2882,7 @@
     "_debugBones": false,
     "_debugSlots": false,
     "_skeletonData": {
-      "__uuid__": "48da53fa-9dff-408a-872d-6a23a972d1e9",
+      "__uuid__": "3796d666-3f76-4d0b-bb34-0835fc5d44e5",
       "__expectedType__": "sp.SkeletonData"
     },
     "defaultSkin": "ENG",
