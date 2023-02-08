@@ -9,6 +9,7 @@ export class SoundMgr extends SingletonComponent<SoundMgr>()
 {
     @property(AudioClip) BGM: AudioClip = null;
     @property(AudioClip) SFX_CLICK: AudioClip = null;
+    @property(AudioClip) SFX_TING: AudioClip = null;
     
 
     public audioSource: AudioSource = null;

@@ -58,7 +58,7 @@ const interactions = [
         name: 'Touch',
         timeStart: 1.5,
         jumpTo: 4,
-        sfx: 'SFX_CLICK',
+        sfx: 'SFX_TING',
     },
     
 ]
@@ -66,8 +66,14 @@ const interactions = [
 const sfx = [
     {
         name: 'Click',
-        timeStart: 4,
+        timeStart: 5.7,
         sfx: 'SFX_CLICK',
+    },
+
+    {
+        name: 'Ting',
+        timeStart: 4,
+        sfx: 'SFX_TING',
     },
 ]
 

@@ -196,6 +196,10 @@
       "__uuid__": "bc8d86a9-f84b-4739-bad8-21ad07d2e442",
       "__expectedType__": "cc.AudioClip"
     },
+    "SFX_TING": {
+      "__uuid__": "6222d2c4-5773-4830-91b4-4252199b81c2",
+      "__expectedType__": "cc.AudioClip"
+    },
     "sfxSource": {
       "__id__": 4
     },
@@ -313,7 +317,7 @@
     "_priority": 1073741824,
     "_fov": 45,
     "_fovAxis": 0,
-    "_orthoHeight": 333.5,
+    "_orthoHeight": 308,
     "_near": 1,
     "_far": 2000,
     "_color": {
