@@ -26,7 +26,13 @@ const dataShow = [
     },
     {
         name: 'Fries',
-        time: 6.6,
+        time: 5.9,
+        sfx: ''
+    },
+
+    {
+        name: 'ButtonCTA',
+        time: 5.9,
         sfx: ''
     },
     
@@ -60,7 +66,7 @@ const interactions = [
 const sfx = [
     {
         name: 'Click',
-        timeStart: 5.5,
+        timeStart: 4,
         sfx: 'SFX_CLICK',
     },
 ]

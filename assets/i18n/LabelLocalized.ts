@@ -91,7 +91,6 @@ export class LabelLocalized extends Component {
         this._richText = this.getComponent(RichTextComponent)
 
         if (this._richText) {
-            
             this.text = this._richText.string
         }
         

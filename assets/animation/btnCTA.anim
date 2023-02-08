@@ -1,53 +1,176 @@
-{
-  "__type__": "cc.AnimationClip",
-  "_name": "btnCTA",
-  "_objFlags": 0,
-  "_native": "",
-  "sample": 30,
-  "speed": 1,
-  "wrapMode": 2,
-  "events": [],
-  "enableTrsBlending": false,
-  "_duration": 2,
-  "_keys": [
-    [
-      0,
-      1,
-      2
-    ]
-  ],
-  "_stepness": 0,
-  "_curves": [
-    {
-      "modifiers": [
-        "scale"
+[
+  {
+    "__type__": "cc.AnimationClip",
+    "_name": "btnCTA",
+    "_objFlags": 0,
+    "_native": "",
+    "sample": 30,
+    "speed": 1,
+    "wrapMode": 2,
+    "events": [],
+    "enableTrsBlending": false,
+    "_duration": 2,
+    "_keys": [
+      [
+        0,
+        1,
+        2
       ],
-      "data": {
-        "keys": 0,
-        "values": [
-          {
-            "__type__": "cc.Vec3",
-            "x": 0.9,
-            "y": 0.9,
-            "z": 0.9
-          },
-          {
-            "__type__": "cc.Vec3",
-            "x": 1,
-            "y": 1,
-            "z": 1
-          },
-          {
-            "__type__": "cc.Vec3",
-            "x": 0.9,
-            "y": 0.9,
-            "z": 0.9
-          }
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        0
+      ],
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        2
+      ]
+    ],
+    "_stepness": 0,
+    "_curves": [
+      {
+        "modifiers": [
+          "scale"
         ],
-        "easingMethods": {}
+        "data": {
+          "keys": 0,
+          "values": [
+            {
+              "__type__": "cc.Vec3",
+              "x": 0.9,
+              "y": 0.9,
+              "z": 0.9
+            },
+            {
+              "__type__": "cc.Vec3",
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            {
+              "__type__": "cc.Vec3",
+              "x": 0.9,
+              "y": 0.9,
+              "z": 0.9
+            }
+          ],
+          "easingMethods": {}
+        }
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 1
+          },
+          "position"
+        ],
+        "data": {
+          "keys": 1,
+          "values": [
+            {
+              "__type__": "cc.Vec3",
+              "x": -138.351,
+              "y": 0.12472222222222196,
+              "z": 0
+            },
+            {
+              "__type__": "cc.Vec3",
+              "x": -0.716,
+              "y": -0.303,
+              "z": 0
+            },
+            {
+              "__type__": "cc.Vec3",
+              "x": 158.153,
+              "y": -0.303,
+              "z": 0
+            }
+          ],
+          "easingMethods": {}
+        }
+      },
+      {
+        "modifiers": [
+          "width"
+        ],
+        "data": {
+          "keys": 2,
+          "values": [
+            100
+          ],
+          "easingMethods": {}
+        },
+        "commonTarget": 0
+      },
+      {
+        "modifiers": [
+          "height"
+        ],
+        "data": {
+          "keys": 3,
+          "values": [
+            94.1324074074074,
+            94.1324074074074,
+            94.1324074074074
+          ],
+          "easingMethods": {}
+        },
+        "commonTarget": 0
+      },
+      {
+        "modifiers": [
+          {
+            "__id__": 2
+          },
+          "active"
+        ],
+        "data": {
+          "keys": 4,
+          "values": [
+            true,
+            true
+          ],
+          "easingMethods": {}
+        }
       }
-    }
-  ],
-  "_commonTargets": [],
-  "_hash": 172277104
-}
+    ],
+    "_commonTargets": [
+      {
+        "modifiers": [
+          {
+            "__id__": 3
+          },
+          {
+            "__id__": 4
+          },
+          "contentSize"
+        ]
+      }
+    ],
+    "_hash": 2405799604
+  },
+  {
+    "__type__": "cc.animation.HierarchyPath",
+    "path": "light trail"
+  },
+  {
+    "__type__": "cc.animation.HierarchyPath",
+    "path": "light trail"
+  },
+  {
+    "__type__": "cc.animation.HierarchyPath",
+    "path": "light trail"
+  },
+  {
+    "__type__": "cc.animation.ComponentPath",
+    "component": "cc.UITransform"
+  }
+]
