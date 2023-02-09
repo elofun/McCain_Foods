@@ -1,6 +1,7 @@
 
 import { _decorator, Component, Node, Label, Enum, HorizontalTextAlignment, RichTextComponent } from 'cc';
 import { RichText } from '../../override_engine/cocos/2d';
+import Resource from '../scripts/core/Resource';
 const { ccclass, property, requireComponent, executeInEditMode } = _decorator;
 
 
@@ -72,7 +73,7 @@ export class LabelLocalized extends Component {
         }
 
         if (this._richText) {
-            this._richText.string = this.text.replace('Advertisement',i18n.t(this._textKey, this._params))
+            this._richText.string = this.text.replace('Advertisement', i18n.t(this._textKey, this._params))
         }
     }
 
@@ -89,11 +90,12 @@ export class LabelLocalized extends Component {
     onLoad() {
         this._label = this.getComponent(Label)
         this._richText = this.getComponent(RichTextComponent)
+        this.language = i18n_LANGUAGES[Resource.GetParam("language").toString() as keyof typeof i18n_LANGUAGES];
 
         if (this._richText) {
             this.text = this._richText.string
         }
-        
+
 
         // console.log('onLanguageChanged', this.node.name, 'key', this.textKey)
         i18n.onLanguageChanged(this._onLanguageChanged, this)
