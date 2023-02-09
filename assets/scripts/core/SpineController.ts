@@ -1,10 +1,11 @@
 
 import { _decorator, Component, Node, sp, tween } from 'cc';
 import { UIOpacity } from '../../../override_engine/cocos/2d';
-import { string } from '../../../override_engine/cocos/core/data/decorators';
-import { i18n } from '../../i18n/i18n';
+import { executeInEditMode, string } from '../../../override_engine/cocos/core/data/decorators';
+import { i18n, i18n_LANGUAGES } from '../../i18n/i18n';
 import { Interact } from '../game/Interactions/Interact';
 import { SoundMgr } from '../utils/SoundMgr';
+import Resource from './Resource';
 import TrackingManager, { TrackingAction } from './TrackingManager';
 const { ccclass, property } = _decorator;
 
@@ -90,7 +91,25 @@ export class SpineController extends Component {
     private isEngaged = false;
     private isCompleted = false;
 
+    private _language = 0;
+
+    get language(): number {
+        return this._language
+    }
+    set language(value: number) {
+        if (this._language === value) {
+            return
+        }
+
+        this._language = value
+        this._updateLanguage()
+    }
     
+    private _updateLanguage() {
+        i18n.init(this._language)
+
+        this._updateText()
+    }
 
     get IsEngaged() {
         return this.isEngaged
@@ -100,12 +119,8 @@ export class SpineController extends Component {
     }
 
     onLoad() {
-        this.anim = this.getComponent(sp.Skeleton).setSkin(i18n.language === 0 ? 'ENG' : 'FRANCE')
-        this.anim = this.getComponent(sp.Skeleton).setAnimation(0, 'Oven Scene', false)
-        
 
-
-        
+        this._updateText();
         this.sfxDone = [];
         this.getComponent(sp.Skeleton).setCompleteListener(() => {
 
@@ -113,8 +128,28 @@ export class SpineController extends Component {
             TrackingManager.SendEventTracking(TrackingAction.COMPLETE_ENGAGEMENTS);
         })
 
+
+        if(window.location.search.substring(1).length > 0)
+        {
+            this.language = i18n_LANGUAGES[window.location.search.substring(1).toString() as keyof typeof i18n_LANGUAGES]
+        }
         
+
+        if (Resource.GetParam("language") && Resource.GetParam("language") !== 'language') {
+            this.language = i18n_LANGUAGES[Resource.GetParam("language").toString() as keyof typeof i18n_LANGUAGES];
+            console.log(this.language)
+        }
+
+        i18n.onLanguageChanged(this._onLanguageChanged, this)
         
+    }
+    private _onLanguageChanged(language: number) {
+        this._updateText()
+    }
+
+    private _updateText(){
+        this.anim = this.getComponent(sp.Skeleton).setSkin(this.language === 1 ? 'FRANCE' : 'ENG')
+        this.anim = this.getComponent(sp.Skeleton).setAnimation(0, 'Oven Scene', false)
     }
 
     update() {

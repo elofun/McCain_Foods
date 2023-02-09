@@ -19,7 +19,7 @@ export class LabelLocalized extends Component {
 
     @property({
         type: i18n_LANGUAGES,
-        readonly: true,
+        
         tooltip: 'Change current language by i18n.init function'
     })
     get language(): number {
@@ -92,6 +92,11 @@ export class LabelLocalized extends Component {
 
         if (this._richText) {
             this.text = this._richText.string
+        }
+
+        if(window.location.search.substring(1).length > 0)
+        {
+            this.language = i18n_LANGUAGES[window.location.search.substring(1).toString() as keyof typeof i18n_LANGUAGES]
         }
 
         if (Resource.GetParam("language") && Resource.GetParam("language") !== 'language') {
