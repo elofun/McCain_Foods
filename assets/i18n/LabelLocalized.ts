@@ -10,7 +10,6 @@ import { i18n, i18n_TEXT_KEYS, i18n_LANGUAGES, i18n_PARAMS } from './i18n';
 
 
 @ccclass('LabelLocalized')
-@requireComponent(Label)
 @executeInEditMode(true)
 export class LabelLocalized extends Component {
     @property({
@@ -90,13 +89,14 @@ export class LabelLocalized extends Component {
     onLoad() {
         this._label = this.getComponent(Label)
         this._richText = this.getComponent(RichTextComponent)
-        this.language = i18n_LANGUAGES[Resource.GetParam("language").toString() as keyof typeof i18n_LANGUAGES];
 
         if (this._richText) {
             this.text = this._richText.string
         }
 
-
+        if (Resource.GetParam("language") && Resource.GetParam("language") !== 'language') {
+            this.language = i18n_LANGUAGES[Resource.GetParam("language").toString() as keyof typeof i18n_LANGUAGES];
+        }
         // console.log('onLanguageChanged', this.node.name, 'key', this.textKey)
         i18n.onLanguageChanged(this._onLanguageChanged, this)
     }
