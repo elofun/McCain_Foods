@@ -281,3 +281,14 @@ export function AddLogText(value: string)
         mainWindow.mDivLogText.removeChild(mainWindow.mDivLogText.firstChild);
     }
 }
+
+export const getQueryString = (key: string) => {
+    const query = window.location.search.substring(1);
+    const vars = query.split('&');
+    const params: { [key: string]: string } = {};
+    vars.forEach(q => {
+        const pair = q.split('=');
+        params[pair[0]] = decodeURIComponent(pair[1] || '');
+    });
+    return params[key] || '';
+};

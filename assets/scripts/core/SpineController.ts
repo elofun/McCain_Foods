@@ -7,6 +7,7 @@ import { Interact } from '../game/Interactions/Interact';
 import { SoundMgr } from '../utils/SoundMgr';
 import Resource from './Resource';
 import TrackingManager, { TrackingAction } from './TrackingManager';
+import { getQueryString } from './Utils';
 const { ccclass, property } = _decorator;
 
 const dataShow = [
@@ -129,9 +130,9 @@ export class SpineController extends Component {
         })
 
 
-        if(window.location.search.substring(1).length > 0)
+        if(getQueryString("languagez").length > 0)
         {
-            this.language = i18n_LANGUAGES[window.location.search.substring(1).toString() as keyof typeof i18n_LANGUAGES]
+            this.language = i18n_LANGUAGES[getQueryString("languagez").toString() as keyof typeof i18n_LANGUAGES]
         }
         
 

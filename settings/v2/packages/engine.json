@@ -92,10 +92,10 @@
     "includeModules": [
       "base",
       "gfx-webgl",
-      "audio",
-      "tween",
       "2d",
       "ui",
+      "audio",
+      "tween",
       "spine"
     ],
     "noDeprecatedFeatures": {

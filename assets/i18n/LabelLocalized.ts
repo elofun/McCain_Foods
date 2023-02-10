@@ -2,6 +2,7 @@
 import { _decorator, Component, Node, Label, Enum, HorizontalTextAlignment, RichTextComponent } from 'cc';
 import { RichText } from '../../override_engine/cocos/2d';
 import Resource from '../scripts/core/Resource';
+import { getQueryString } from '../scripts/core/Utils';
 const { ccclass, property, requireComponent, executeInEditMode } = _decorator;
 
 
@@ -94,9 +95,9 @@ export class LabelLocalized extends Component {
             this.text = this._richText.string
         }
 
-        if(window.location.search.substring(1).length > 0)
+        if(getQueryString("languagez").length > 0)
         {
-            this.language = i18n_LANGUAGES[window.location.search.substring(1).toString() as keyof typeof i18n_LANGUAGES]
+            this.language = i18n_LANGUAGES[getQueryString("languagez").toString() as keyof typeof i18n_LANGUAGES]
         }
 
         if (Resource.GetParam("language") && Resource.GetParam("language") !== 'language') {
