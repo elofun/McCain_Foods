@@ -37,6 +37,12 @@ const dataShow = [
         time: 5.9,
         sfx: ''
     },
+    {
+        name: 'ButtonInfo',
+        time: 5.9,
+        sfx: ''
+    },
+    
     
     
 ]
@@ -51,6 +57,12 @@ const dataHide = [
     {
         name: 'Text',
         time: 4,
+        sfx: ''
+    },
+
+    {
+        name: 'ButtonInfoOnlyLabel',
+        time: 5.9,
         sfx: ''
     },
 ]
@@ -87,6 +99,9 @@ export class SpineController extends Component {
     @property(Node)
     public interactions: Node = null;
 
+    @property(Node)
+    public logo: Node = null;
+
     private anim: any = null;
     private sfxDone: Array<string> = [];
     private isEngaged = false;
@@ -120,6 +135,12 @@ export class SpineController extends Component {
     }
 
     onLoad() {
+
+        if ((<any>window).isOutfit7 ) {
+            setTimeout(() => {
+                this.logo.setPosition(this.logo.position.x, this.logo.position.y - 30)
+            }, 100)
+        }
 
         this._updateText();
         this.sfxDone = [];
